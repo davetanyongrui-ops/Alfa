@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALFANUGERAH - Premium BPO & Digital Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #3b82f6 100%);
+        }
+        
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border-radius: 3px;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(2deg);
+            }
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .feature-badge {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-badge:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+        
+        .feature-badge:hover:before {
+            transform: translateX(100%);
+        }
+        
+        .testimonial-card {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .input-focus:focus {
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Animation keyframes */
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        
+        @keyframes blob {
+            0%, 100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+        }
+        
+        /* Language dropdown animations */
+        .language-dropdown {
+            transform: translateY(-10px);
+            opacity: 0;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .language-dropdown.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        /* Smooth transitions for mobile menu */
+        .mobile-menu {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.show {
+            transform: translateY(0);
+        }
+        
+        /* Ensure all hover effects are smooth */
+        * {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+        }
+        
+        /* Override specific elements that need different transitions */
+        .service-card, .nav-link, .testimonial-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50 backdrop-blur-sm bg-opacity-80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="#home" class="cursor-pointer">
+                            <img src="Alfanugerah Digital Marketing Logo_Color_Trans.png" alt="Alfanugerah Digital Marketing Logo" class="h-16 w-auto hover:opacity-80 transition duration-300">
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#home" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium" data-lang-key="nav_home">Home</a>
+                    <a href="#about" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium" data-lang-key="nav_about">About</a>
+                    <a href="#services" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium" data-lang-key="nav_services">Services</a>
+                    <a href="#emerging-markets" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium" data-lang-key="nav_emerging_markets">Emerging Markets</a>
+                    <a href="#contact" class="nav-link text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium" data-lang-key="nav_contact">Contact</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition duration-300" data-lang-key="nav_get_started">Get Started</a>
+                    
+                    <!-- Language Switcher -->
+                    <div class="relative inline-block text-left">
+                        <button id="language-dropdown-btn" class="inline-flex justify-center items-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200">
+                            <span id="current-language" class="mr-2">🇺🇸 EN</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="language-dropdown" class="language-dropdown hidden absolute right-0 z-50 mt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                            <div class="py-1">
+                                <button class="language-option w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-150" data-lang="en">
+                                    <span class="mr-3">🇺🇸</span>English
+                                </button>
+                                <button class="language-option w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-150" data-lang="id">
+                                    <span class="mr-3">🇮🇩</span>Bahasa Indonesia
+                                </button>
+                                <button class="language-option w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-150" data-lang="zh">
+                                    <span class="mr-3">🇨🇳</span>中文
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white shadow-xl">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50" data-lang-key="nav_home">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50" data-lang-key="nav_about">About</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50" data-lang-key="nav_services">Services</a>
+                <a href="#emerging-markets" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50" data-lang-key="nav_emerging_markets">Emerging Markets</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50" data-lang-key="nav_contact">Contact</a>
+                <a href="#contact" class="block w-full text-center bg-blue-600 text-white px-4 py-2 rounded-md font-medium hover:bg-blue-700 transition duration-300 mt-2" data-lang-key="nav_get_started">Get Started</a>
+                
+                <!-- Mobile Language Switcher -->
+                <div class="mt-4 px-3">
+                    <div class="relative">
+                        <button id="mobile-language-dropdown-btn" class="w-full inline-flex justify-center items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200">
+                            <span id="mobile-current-language" class="mr-2">🇺🇸 EN</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="mobile-language-dropdown" class="language-dropdown hidden absolute left-0 z-50 mt-2 w-full bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                            <div class="py-1">
+                                <button class="mobile-language-option w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-150" data-lang="en">
+                                    <span class="mr-3">🇺🇸</span>English
+                                </button>
+                                <button class="mobile-language-option w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-150" data-lang="id">
+                                    <span class="mr-3">🇮🇩</span>Bahasa Indonesia
+                                </button>
+                                <button class="mobile-language-option w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition duration-150" data-lang="zh">
+                                    <span class="mr-3">🇨🇳</span>中文
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white pt-24 pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+            
+            <div class="flex flex-col md:flex-row items-center relative z-10">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        <span class="block" data-lang-key="hero_title_line1">Specialized Digital</span>
+                        <span class="block" data-lang-key="hero_title_line2">Marketing</span>
+                    </h1>
+                    <p class="text-xl mb-8 max-w-lg opacity-90" data-lang-key="hero_description">Alfanugerah is a digital marketing company specialized in providing premium Business Process Outsourcing (BPO) services to help our clients scale their businesses efficiently and effectively while drastically reducing operational costs.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-center transition duration-300 transform hover:scale-105 shadow-lg" data-lang-key="hero_btn_get_started">Get Started</a>
+                        <a href="#services" class="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-full font-semibold text-center transition duration-300 transform hover:scale-105" data-lang-key="hero_btn_our_services">Our Services</a>
+                    </div>
+                    
+                </div>
+                <div class="md:w-1/2 flex justify-center relative">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Business Process Outsourcing" class="rounded-2xl shadow-2xl animate-float max-w-full h-auto border-8 border-white/20">
+                    
+                    <div class="absolute -bottom-8 -left-8 bg-white p-4 rounded-xl shadow-xl hidden lg:block">
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-check-circle text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Quality Assurance</p>
+                                <p class="text-sm text-gray-600">100% satisfaction guarantee</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute -top-8 -right-8 bg-white p-4 rounded-xl shadow-xl hidden lg:block">
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-chart-line text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Proven Results</p>
+                                <p class="text-sm text-gray-600">+45% efficiency</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50 relative overflow-hidden">
+        <div class="absolute -right-32 -top-32 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium mb-4" data-lang-key="about_section_label">About Us</span>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-lang-key="about_why_title">Why Choose Alfanugerah?</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <div class="bg-white p-8 rounded-2xl shadow-xl">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-6" data-lang-key="bpo_what_title">What is BPO?</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed" data-lang-key="bpo_definition">
+                            BPO stands for <span class="font-semibold text-blue-600">Business Process Outsourcing</span>, which involves contracting specific business operations to a third-party service provider to improve efficiency and reduce costs.
+                        </p>
+                        <p class="text-gray-600 mb-6 leading-relaxed" data-lang-key="bpo_detailed_explanation">
+                            Business Process Outsourcing is a strategic practice where companies delegate non-core business functions to external specialized providers. This comprehensive approach includes customer service, technical support, data entry, human resources, accounting, and various operational tasks. BPO enables organizations to leverage expert knowledge, advanced technologies, and economies of scale while maintaining focus on their primary business objectives.
+                        </p>
+                        <p class="text-gray-600 mb-6 leading-relaxed" data-lang-key="alfanugerah_description">
+                            Alfanugerah is a digital marketing company specializing in BPO services. We provide comprehensive digital marketing and outsourcing solutions tailored to your business needs. Our team of experts helps companies streamline operations, enhance customer experiences, and drive growth through strategic outsourcing and digital marketing.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed" data-lang-key="alfanugerah_experience">
+                            With years of experience in the industry, we've helped numerous businesses optimize their processes, reduce overhead costs by up to 45%, and focus on their core competencies while we handle the rest. Our approach combines cutting-edge technology with human expertise to deliver measurable results that exceed expectations.
+                        </p>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                            <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                                <i class="fas fa-lightbulb text-blue-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-3" data-lang-key="feature_innovative_title">Innovative Solutions</h4>
+                            <p class="text-gray-600" data-lang-key="feature_innovative_desc">We combine cutting-edge technology with proven methodologies to deliver exceptional results.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                            <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                                <i class="fas fa-users text-blue-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-3" data-lang-key="feature_expert_title">Expert Team</h4>
+                            <p class="text-gray-600" data-lang-key="feature_expert_desc">Our professionals bring years of industry experience and specialized knowledge to every project.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                            <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                                <i class="fas fa-cogs text-blue-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-3" data-lang-key="feature_customized_title">Customized Approach</h4>
+                            <p class="text-gray-600" data-lang-key="feature_customized_desc">We tailor our services to meet your specific business requirements and goals.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                            <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                                <i class="fas fa-chart-pie text-blue-600 text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-900 mb-3" data-lang-key="feature_datadriven_title">Data-Driven</h4>
+                            <p class="text-gray-600" data-lang-key="feature_datadriven_desc">Our strategies are backed by analytics and continuous performance monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <h3 class="text-4xl font-bold mb-2">45%</h3>
+                    <p class="text-blue-100" data-lang-key="stats_cost_reduction">Cost Reduction</p>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-4xl font-bold mb-2">98%</h3>
+                    <p class="text-blue-100" data-lang-key="stats_success_rate">Success Rate</p>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-4xl font-bold mb-2">24/7</h3>
+                    <p class="text-blue-100" data-lang-key="stats_support_available">Support Available</p>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-4xl font-bold mb-2">100%</h3>
+                    <p class="text-blue-100" data-lang-key="stats_confidentiality">Confidentiality</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium mb-4" data-lang-key="services_section_label">Our Services</span>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-lang-key="services_title">Comprehensive BPO Solutions</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto" data-lang-key="services_description">Tailored services designed to streamline your business operations and drive sustainable growth.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card rounded-xl overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-blue-100 p-4 rounded-xl mr-5">
+                                <i class="fas fa-tag text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900" data-lang-key="service_branding_title">Branding & Brand Management</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-lang-key="service_branding_desc">
+                            Comprehensive branding solutions to establish and maintain your brand identity in the market, ensuring consistency across all touchpoints.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="branding_feature1">Brand strategy development</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="branding_feature2">Visual identity design</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="branding_feature3">Brand guidelines</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-blue-600 font-medium inline-flex items-center hover:text-blue-800 transition duration-300" data-lang-key="service_learn_more">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card rounded-xl overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-blue-100 p-4 rounded-xl mr-5">
+                                <i class="fas fa-phone-alt text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900" data-lang-key="service_telemarketing_title">Telemarketing Campaigns</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-lang-key="service_telemarketing_desc">
+                            Targeted telemarketing strategies to generate leads, conduct market research, and drive sales conversions for your business.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="telemarketing_feature1">Lead generation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="telemarketing_feature2">Appointment setting</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="telemarketing_feature3">Customer surveys</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-blue-600 font-medium inline-flex items-center hover:text-blue-800 transition duration-300" data-lang-key="service_learn_more">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card rounded-xl overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-blue-100 p-4 rounded-xl mr-5">
+                                <i class="fas fa-users text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900" data-lang-key="service_sales_title">Sales Team Management</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-lang-key="service_sales_desc">
+                            End-to-end employment and management of sales personnel, from recruitment to performance monitoring and training.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="sales_feature1">Talent acquisition</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="sales_feature2">Performance tracking</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="sales_feature3">Continuous training</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-blue-600 font-medium inline-flex items-center hover:text-blue-800 transition duration-300" data-lang-key="service_learn_more">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card rounded-xl overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-blue-100 p-4 rounded-xl mr-5">
+                                <i class="fas fa-warehouse text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900" data-lang-key="service_warehousing_title">Warehousing Solutions</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-lang-key="service_warehousing_desc">
+                            Efficient warehousing and inventory management services to optimize your supply chain and reduce operational costs.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="warehousing_feature1">Inventory control</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="warehousing_feature2">Order fulfillment</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="warehousing_feature3">Real-time tracking</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-blue-600 font-medium inline-flex items-center hover:text-blue-800 transition duration-300" data-lang-key="service_learn_more">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card rounded-xl overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-blue-100 p-4 rounded-xl mr-5">
+                                <i class="fas fa-truck text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900" data-lang-key="service_delivery_title">Delivery & Logistics</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-lang-key="service_delivery_desc">
+                            Reliable delivery and logistics services to ensure your products reach customers on time and in perfect condition.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="delivery_feature1">Last-mile delivery</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="delivery_feature2">Route optimization</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="delivery_feature3">Tracking systems</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-blue-600 font-medium inline-flex items-center hover:text-blue-800 transition duration-300" data-lang-key="service_learn_more">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="service-card rounded-xl overflow-hidden">
+                    <div class="p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-blue-100 p-4 rounded-xl mr-5">
+                                <i class="fas fa-headset text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900" data-lang-key="service_aftersales_title">After-Sales Service</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6" data-lang-key="service_aftersales_desc">
+                            Professional customer support and after-sales services to enhance customer satisfaction and build brand loyalty.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="aftersales_feature1">Technical support</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="aftersales_feature2">Complaint resolution</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span class="text-gray-700" data-lang-key="aftersales_feature3">Customer feedback</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="text-blue-600 font-medium inline-flex items-center hover:text-blue-800 transition duration-300" data-lang-key="service_learn_more">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emerging Markets Section -->
+    <section id="emerging-markets" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium mb-4" data-lang-key="emerging_markets_label">Emerging Markets</span>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-lang-key="emerging_markets_title">Credibility with Measurable Results</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-3xl mx-auto" data-lang-key="emerging_markets_desc">
+                    Comprehensive non-disclosure agreements signed with our clients provide them with the assurance that all data and information generated will be kept at the highest levels of confidentiality, thereby protecting the interests of our clients.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                <!-- Southeast Asia Potential -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-4 rounded-full mr-4">
+                            <i class="fas fa-globe-asia text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900" data-lang-key="southeast_asia_title">Southeast Asia Potential</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed" data-lang-key="southeast_asia_desc">
+                        Southeast Asia represents one of the world's fastest-growing economic regions, with countries like <span class="font-semibold text-blue-600">Indonesia, Malaysia, and Vietnam</span> leading unprecedented digital transformation and economic expansion.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-chart-line text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900" data-lang-key="emerging_feature1_title">Rapidly Growing Middle Class</h4>
+                                <p class="text-gray-600" data-lang-key="emerging_feature1_desc">Rising disposable income creating new consumer markets</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-mobile-alt text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900" data-lang-key="emerging_feature2_title">Mobile-First Economy</h4>
+                                <p class="text-gray-600" data-lang-key="emerging_feature2_desc">High smartphone penetration driving digital commerce</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-users text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900" data-lang-key="emerging_feature3_title">Young Demographics</h4>
+                                <p class="text-gray-600" data-lang-key="emerging_feature3_desc">Tech-savvy population embracing digital solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Localization Importance -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-4 rounded-full mr-4">
+                            <i class="fas fa-language text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900" data-lang-key="localization_title">Language Localization Advantage</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed" data-lang-key="localization_desc">
+                        Success in Southeast Asian markets requires deep cultural understanding and local language expertise. The importance of having a <span class="font-semibold text-blue-600">"local face"</span> in marketing campaigns cannot be overstated.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-comments text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900" data-lang-key="emerging_feature4_title">Cultural Resonance</h4>
+                                <p class="text-gray-600" data-lang-key="emerging_feature4_desc">Local representation builds trust and emotional connection</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-heart text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900" data-lang-key="emerging_feature5_title">Brand Authenticity</h4>
+                                <p class="text-gray-600" data-lang-key="emerging_feature5_desc">Native language campaigns increase engagement by 300%</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-2 rounded-full mr-4 mt-1">
+                                <i class="fas fa-handshake text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900" data-lang-key="emerging_feature6_title">Local Partnerships</h4>
+                                <p class="text-gray-600" data-lang-key="emerging_feature6_desc">Understanding cultural nuances drives conversion rates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Market Statistics -->
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-2xl">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold mb-4" data-lang-key="market_opportunities_title">Southeast Asia Market Opportunities</h3>
+                    <p class="text-blue-100 max-w-3xl mx-auto" data-lang-key="market_opportunities_desc">Key markets showing exceptional growth potential for businesses ready to expand</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="text-3xl font-bold mb-2" data-lang-key="market_stat1_value">685M</div>
+                        <p class="text-blue-100" data-lang-key="market_stat1_label">Total Population</p>
+                        <p class="text-sm text-blue-200 mt-1" data-lang-key="market_stat1_desc">Indonesia, Malaysia, Vietnam</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold mb-2" data-lang-key="market_stat2_value">$3.5T</div>
+                        <p class="text-blue-100" data-lang-key="market_stat2_label">Combined GDP</p>
+                        <p class="text-sm text-blue-200 mt-1" data-lang-key="market_stat2_desc">Growing at 5-7% annually</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold mb-2" data-lang-key="market_stat3_value">78%</div>
+                        <p class="text-blue-100" data-lang-key="market_stat3_label">Internet Penetration</p>
+                        <p class="text-sm text-blue-200 mt-1" data-lang-key="market_stat3_desc">Mobile-first consumers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6" data-lang-key="cta_title">Ready to Transform Your Business?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto" data-lang-key="cta_description">Let ALFANUGERAH handle your business processes so you can focus on growth and innovation.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#contact" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg inline-block transition duration-300 transform hover:scale-105 shadow-lg" data-lang-key="cta_btn_contact">Get in Touch</a>
+                <a href="https://wa.me/6281378676868" class="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-full font-semibold text-lg inline-block transition duration-300 transform hover:scale-105" data-lang-key="cta_btn_whatsapp">
+                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium mb-4" data-lang-key="contact_section_label">Contact Us</span>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-lang-key="contact_title">Get In Touch</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto" data-lang-key="contact_description">Have questions or ready to get started? Reach out to our team today.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-lg h-full">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-6" data-lang-key="contact_info_title">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-xl mr-4">
+                                    <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900" data-lang-key="contact_email_label">Email</h4>
+                                    <a href="mailto:alfanugerah.yongrui@gmail.com" class="text-blue-600 hover:underline">alfanugerah.yongrui@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-xl mr-4">
+                                    <i class="fab fa-whatsapp text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900" data-lang-key="contact_whatsapp_label">WhatsApp</h4>
+                                    <a href="https://wa.me/6281378676868" class="text-blue-600 hover:underline">+62 813 7867 6868</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-xl mr-4">
+                                    <i class="fas fa-clock text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900" data-lang-key="contact_hours_label">Business Hours</h4>
+                                    <p class="text-gray-600" data-lang-key="contact_hours_time">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12">
+                            <h4 class="font-medium text-gray-900 mb-4" data-lang-key="contact_follow_label">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-lg h-full">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-6" data-lang-key="contact_form_title">Send Us a Message</h3>
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2" data-lang-key="form_name_label">Your Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-5 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 input-focus transition duration-300" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2" data-lang-key="form_email_label">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-5 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 input-focus transition duration-300" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2" data-lang-key="form_phone_label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-5 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 input-focus transition duration-300">
+                            </div>
+                            <div>
+                                <label for="service" class="block text-sm font-medium text-gray-700 mb-2" data-lang-key="form_service_label">Service Interested In</label>
+                                <select id="service" name="service" class="w-full px-5 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 input-focus transition duration-300">
+                                    <option value="" data-lang-key="form_service_placeholder">Select a service</option>
+                                    <option value="Branding" data-lang-key="form_service_branding">Branding & Brand Management</option>
+                                    <option value="Telemarketing" data-lang-key="form_service_telemarketing">Telemarketing Campaigns</option>
+                                    <option value="Sales" data-lang-key="form_service_sales">Sales Team Management</option>
+                                    <option value="Warehousing" data-lang-key="form_service_warehousing">Warehousing Solutions</option>
+                                    <option value="Logistics" data-lang-key="form_service_logistics">Delivery & Logistics</option>
+                                    <option value="Support" data-lang-key="form_service_support">After-Sales Service</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2" data-lang-key="form_message_label">Your Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-5 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 input-focus transition duration-300" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 text-white py-4 px-6 rounded-xl font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105" data-lang-key="form_submit_btn">
+                                Send Message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <a href="#home" class="cursor-pointer">
+                            <img src="Alfanugerah Digital Marketing Logo_Color_Trans.png" alt="Alfanugerah Digital Marketing Logo" class="h-14 w-auto hover:opacity-80 transition duration-300">
+                        </a>
+                    </div>
+                    <p class="text-gray-400 mb-6" data-lang-key="footer_description">Professional Business Process Outsourcing solutions to help your business grow efficiently and cost-effectively.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6" data-lang-key="footer_quick_links">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300" data-lang-key="nav_home">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300" data-lang-key="nav_about">About</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300" data-lang-key="nav_services">Services</a></li>
+                        <li><a href="#emerging-markets" class="text-gray-400 hover:text-white transition duration-300" data-lang-key="nav_emerging_markets">Emerging Markets</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300" data-lang-key="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6" data-lang-key="footer_services_title">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300" data-lang-key="footer_service_branding">Branding</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300" data-lang-key="footer_service_telemarketing">Telemarketing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300" data-lang-key="footer_service_sales">Sales Management</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300" data-lang-key="footer_service_logistics">Logistics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300" data-lang-key="footer_service_support">Customer Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p data-lang-key="footer_copyright">&copy; 2023 ALFANUGERAH. All rights reserved.</p>
+                <div class="mt-4 text-sm">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 mr-4" data-lang-key="footer_privacy">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 mr-4" data-lang-key="footer_terms">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300" data-lang-key="footer_cookie">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-blue-600 text-white p-4 rounded-full shadow-xl opacity-0 invisible transition-all duration-300 hover:bg-blue-700 transform hover:scale-110">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <script>
+        // Language translations
+        const translations = {
+            en: {
+                nav_home: "Home",
+                nav_about: "About",
+                nav_services: "Services",
+                nav_emerging_markets: "Emerging Markets",
+                nav_contact: "Contact",
+                nav_get_started: "Get Started",
+                hero_title_line1: "Specialized Digital",
+                hero_title_line2: "Marketing",
+                hero_description: "Alfanugerah is a digital marketing company specialized in providing premium Business Process Outsourcing (BPO) services to help our clients scale their businesses efficiently and effectively while drastically reducing operational costs.",
+                hero_btn_get_started: "Get Started",
+                hero_btn_our_services: "Our Services",
+                about_section_label: "About Us",
+                about_why_title: "Why Choose Alfanugerah?",
+                bpo_what_title: "What is BPO?",
+                bpo_definition: "BPO stands for Business Process Outsourcing, which involves contracting specific business operations to a third-party service provider to improve efficiency and reduce costs.",
+                bpo_detailed_explanation: "Business Process Outsourcing is a strategic practice where companies delegate non-core business functions to external specialized providers. This comprehensive approach includes customer service, technical support, data entry, human resources, accounting, and various operational tasks. BPO enables organizations to leverage expert knowledge, advanced technologies, and economies of scale while maintaining focus on their primary business objectives.",
+                alfanugerah_description: "Alfanugerah is a digital marketing company specializing in BPO services. We provide comprehensive digital marketing and outsourcing solutions tailored to your business needs. Our team of experts helps companies streamline operations, enhance customer experiences, and drive growth through strategic outsourcing and digital marketing.",
+                alfanugerah_experience: "With years of experience in the industry, we've helped numerous businesses optimize their processes, reduce overhead costs by up to 45%, and focus on their core competencies while we handle the rest. Our approach combines cutting-edge technology with human expertise to deliver measurable results that exceed expectations.",
+                services_section_label: "Our Services",
+                services_title: "Comprehensive BPO Solutions",
+                services_description: "Tailored services designed to streamline your business operations and drive sustainable growth.",
+                service_branding_title: "Branding & Brand Management",
+                service_branding_desc: "Comprehensive branding solutions to establish and maintain your brand identity in the market, ensuring consistency across all touchpoints.",
+                service_telemarketing_title: "Telemarketing Campaigns",
+                service_telemarketing_desc: "Targeted telemarketing strategies to generate leads, conduct market research, and drive sales conversions for your business.",
+                service_sales_title: "Sales Team Management",
+                service_sales_desc: "End-to-end employment and management of sales personnel, from recruitment to performance monitoring and training.",
+                service_warehousing_title: "Warehousing Solutions",
+                service_warehousing_desc: "Efficient warehousing and inventory management services to optimize your supply chain and reduce operational costs.",
+                service_delivery_title: "Delivery & Logistics",
+                service_delivery_desc: "Reliable delivery and logistics services to ensure your products reach customers on time and in perfect condition.",
+                service_aftersales_title: "After-Sales Service",
+                service_aftersales_desc: "Professional customer support and after-sales services to enhance customer satisfaction and build brand loyalty.",
+                emerging_markets_label: "Emerging Markets",
+                emerging_markets_title: "Credibility with Measurable Results",
+                emerging_markets_desc: "Comprehensive non-disclosure agreements signed with our clients provide them with the assurance that all data and information generated will be kept at the highest levels of confidentiality, thereby protecting the interests of our clients.",
+                southeast_asia_title: "Southeast Asia Potential",
+                southeast_asia_desc: "Southeast Asia represents one of the world's fastest-growing economic regions, with countries like Indonesia, Malaysia, and Vietnam leading unprecedented digital transformation and economic expansion.",
+                localization_title: "Language Localization Advantage",
+                localization_desc: "Success in Southeast Asian markets requires deep cultural understanding and local language expertise. The importance of having a \"local face\" in marketing campaigns cannot be overstated.",
+                contact_section_label: "Contact Us",
+                contact_title: "Get In Touch",
+                contact_description: "Have questions or ready to get started? Reach out to our team today.",
+                contact_info_title: "Contact Information",
+                contact_form_title: "Send Us a Message",
+                cta_title: "Ready to Transform Your Business?",
+                cta_description: "Let ALFANUGERAH handle your business processes so you can focus on growth and innovation.",
+                cta_btn_contact: "Get in Touch",
+                cta_btn_whatsapp: "WhatsApp Us",
+                // About section features
+                feature_innovative_title: "Innovative Solutions",
+                feature_innovative_desc: "We combine cutting-edge technology with proven methodologies to deliver exceptional results.",
+                feature_expert_title: "Expert Team",
+                feature_expert_desc: "Our professionals bring years of industry experience and specialized knowledge to every project.",
+                feature_customized_title: "Customized Approach",
+                feature_customized_desc: "We tailor our services to meet your specific business requirements and goals.",
+                feature_datadriven_title: "Data-Driven",
+                feature_datadriven_desc: "Our strategies are backed by analytics and continuous performance monitoring.",
+                // Stats section
+                stats_cost_reduction: "Cost Reduction",
+                stats_success_rate: "Success Rate",
+                stats_support_available: "Support Available",
+                stats_confidentiality: "Confidentiality",
+                // Service features
+                service_learn_more: "Learn more",
+                branding_feature1: "Brand strategy development",
+                branding_feature2: "Visual identity design",
+                branding_feature3: "Brand guidelines",
+                telemarketing_feature1: "Lead generation",
+                telemarketing_feature2: "Appointment setting",
+                telemarketing_feature3: "Customer surveys",
+                sales_feature1: "Talent acquisition",
+                sales_feature2: "Performance tracking",
+                sales_feature3: "Continuous training",
+                warehousing_feature1: "Inventory control",
+                warehousing_feature2: "Order fulfillment",
+                warehousing_feature3: "Real-time tracking",
+                delivery_feature1: "Last-mile delivery",
+                delivery_feature2: "Route optimization",
+                delivery_feature3: "Tracking systems",
+                aftersales_feature1: "Technical support",
+                aftersales_feature2: "Complaint resolution",
+                aftersales_feature3: "Customer feedback",
+                // Emerging markets features
+                emerging_feature1_title: "Rapidly Growing Middle Class",
+                emerging_feature1_desc: "Rising disposable income creating new consumer markets",
+                emerging_feature2_title: "Mobile-First Economy",
+                emerging_feature2_desc: "High smartphone penetration driving digital commerce",
+                emerging_feature3_title: "Young Demographics",
+                emerging_feature3_desc: "Tech-savvy population embracing digital solutions",
+                emerging_feature4_title: "Cultural Resonance",
+                emerging_feature4_desc: "Local representation builds trust and emotional connection",
+                emerging_feature5_title: "Brand Authenticity",
+                emerging_feature5_desc: "Native language campaigns increase engagement by 300%",
+                emerging_feature6_title: "Local Partnerships",
+                emerging_feature6_desc: "Understanding cultural nuances drives conversion rates",
+                // Market statistics
+                market_stat1_value: "685M",
+                market_stat1_label: "Total Population",
+                market_stat1_desc: "Indonesia, Malaysia, Vietnam",
+                market_stat2_value: "$3.5T",
+                market_stat2_label: "Combined GDP",
+                market_stat2_desc: "Growing at 5-7% annually",
+                market_stat3_value: "78%",
+                market_stat3_label: "Internet Penetration",
+                market_stat3_desc: "Mobile-first consumers",
+                market_opportunities_title: "Southeast Asia Market Opportunities",
+                market_opportunities_desc: "Key markets showing exceptional growth potential for businesses ready to expand",
+                // Contact form
+                form_name_label: "Your Name",
+                form_email_label: "Email Address",
+                form_phone_label: "Phone Number",
+                form_service_label: "Service Interested In",
+                form_service_placeholder: "Select a service",
+                form_service_branding: "Branding & Brand Management",
+                form_service_telemarketing: "Telemarketing Campaigns",
+                form_service_sales: "Sales Team Management",
+                form_service_warehousing: "Warehousing Solutions",
+                form_service_logistics: "Delivery & Logistics",
+                form_service_support: "After-Sales Service",
+                form_message_label: "Your Message",
+                form_submit_btn: "Send Message",
+                // Contact info
+                contact_email_label: "Email",
+                contact_whatsapp_label: "WhatsApp",
+                contact_hours_label: "Business Hours",
+                contact_hours_time: "Monday - Friday: 9:00 AM - 6:00 PM",
+                contact_follow_label: "Follow Us",
+                // Footer
+                footer_description: "Professional Business Process Outsourcing solutions to help your business grow efficiently and cost-effectively.",
+                footer_quick_links: "Quick Links",
+                footer_services_title: "Services",
+                footer_service_branding: "Branding",
+                footer_service_telemarketing: "Telemarketing",
+                footer_service_sales: "Sales Management",
+                footer_service_logistics: "Logistics",
+                footer_service_support: "Customer Support",
+                footer_copyright: "&copy; 2023 ALFANUGERAH. All rights reserved.",
+                footer_privacy: "Privacy Policy",
+                footer_terms: "Terms of Service",
+                footer_cookie: "Cookie Policy"
+            },
+            id: {
+                nav_home: "Beranda",
+                nav_about: "Tentang",
+                nav_services: "Layanan",
+                nav_emerging_markets: "Pasar Berkembang",
+                nav_contact: "Kontak",
+                nav_get_started: "Mulai",
+                hero_title_line1: "Pemasaran Digital",
+                hero_title_line2: "Terspesialisasi",
+                hero_description: "Alfanugerah adalah perusahaan pemasaran digital yang mengkhususkan diri dalam menyediakan layanan Business Process Outsourcing (BPO) premium untuk membantu klien kami mengembangkan bisnis mereka secara efisien dan efektif sambil mengurangi biaya operasional secara drastis.",
+                hero_btn_get_started: "Mulai",
+                hero_btn_our_services: "Layanan Kami",
+                about_section_label: "Tentang Kami",
+                about_why_title: "Mengapa Memilih Alfanugerah?",
+                bpo_what_title: "Apa itu BPO?",
+                bpo_definition: "BPO adalah singkatan dari Business Process Outsourcing, yang melibatkan pengalihdayaan operasi bisnis tertentu kepada penyedia layanan pihak ketiga untuk meningkatkan efisiensi dan mengurangi biaya.",
+                bpo_detailed_explanation: "Business Process Outsourcing adalah praktik strategis di mana perusahaan mendelegasikan fungsi bisnis non-inti kepada penyedia eksternal yang terspesialisasi. Pendekatan komprehensif ini mencakup layanan pelanggan, dukungan teknis, entri data, sumber daya manusia, akuntansi, dan berbagai tugas operasional. BPO memungkinkan organisasi memanfaatkan pengetahuan ahli, teknologi canggih, dan ekonomi skala sambil mempertahankan fokus pada tujuan bisnis utama mereka.",
+                alfanugerah_description: "Alfanugerah adalah perusahaan pemasaran digital yang mengkhususkan diri dalam layanan BPO. Kami menyediakan solusi pemasaran digital dan outsourcing komprehensif yang disesuaikan dengan kebutuhan bisnis Anda. Tim ahli kami membantu perusahaan menyederhanakan operasi, meningkatkan pengalaman pelanggan, dan mendorong pertumbuhan melalui outsourcing strategis dan pemasaran digital.",
+                alfanugerah_experience: "Dengan pengalaman bertahun-tahun di industri ini, kami telah membantu banyak bisnis mengoptimalkan proses mereka, mengurangi biaya overhead hingga 45%, dan fokus pada kompetensi inti mereka sementara kami menangani sisanya. Pendekatan kami menggabungkan teknologi mutakhir dengan keahlian manusia untuk memberikan hasil terukur yang melampaui ekspektasi.",
+                services_section_label: "Layanan Kami",
+                services_title: "Solusi BPO Komprehensif",
+                services_description: "Layanan yang disesuaikan untuk menyederhanakan operasi bisnis Anda dan mendorong pertumbuhan berkelanjutan.",
+                service_branding_title: "Branding & Manajemen Merek",
+                service_branding_desc: "Solusi branding komprehensif untuk membangun dan mempertahankan identitas merek Anda di pasar, memastikan konsistensi di semua titik sentuh.",
+                service_telemarketing_title: "Kampanye Telemarketing",
+                service_telemarketing_desc: "Strategi telemarketing yang ditargetkan untuk menghasilkan prospek, melakukan riset pasar, dan mendorong konversi penjualan untuk bisnis Anda.",
+                service_sales_title: "Manajemen Tim Penjualan",
+                service_sales_desc: "Perekrutan dan manajemen personel penjualan end-to-end, dari rekrutmen hingga pemantauan kinerja dan pelatihan.",
+                service_warehousing_title: "Solusi Pergudangan",
+                service_warehousing_desc: "Layanan pergudangan dan manajemen inventori yang efisien untuk mengoptimalkan rantai pasokan Anda dan mengurangi biaya operasional.",
+                service_delivery_title: "Pengiriman & Logistik",
+                service_delivery_desc: "Layanan pengiriman dan logistik yang andal untuk memastikan produk Anda sampai ke pelanggan tepat waktu dan dalam kondisi sempurna.",
+                service_aftersales_title: "Layanan Purna Jual",
+                service_aftersales_desc: "Dukungan pelanggan profesional dan layanan purna jual untuk meningkatkan kepuasan pelanggan dan membangun loyalitas merek.",
+                emerging_markets_label: "Pasar Berkembang",
+                emerging_markets_title: "Kredibilitas dengan Hasil Terukur",
+                emerging_markets_desc: "Perjanjian non-disclosure komprehensif yang ditandatangani dengan klien kami memberikan jaminan bahwa semua data dan informasi yang dihasilkan akan dijaga pada tingkat kerahasiaan tertinggi, sehingga melindungi kepentingan klien kami.",
+                southeast_asia_title: "Potensi Asia Tenggara",
+                southeast_asia_desc: "Asia Tenggara merupakan salah satu wilayah ekonomi dengan pertumbuhan tercepat di dunia, dengan negara-negara seperti Indonesia, Malaysia, dan Vietnam memimpin transformasi digital dan ekspansi ekonomi yang belum pernah terjadi sebelumnya.",
+                localization_title: "Keunggulan Lokalisasi Bahasa",
+                localization_desc: "Kesuksesan di pasar Asia Tenggara memerlukan pemahaman budaya yang mendalam dan keahlian bahasa lokal. Pentingnya memiliki \"wajah lokal\" dalam kampanye pemasaran tidak dapat diabaikan.",
+                contact_section_label: "Hubungi Kami",
+                contact_title: "Hubungi Kami",
+                contact_description: "Ada pertanyaan atau siap untuk memulai? Hubungi tim kami hari ini.",
+                contact_info_title: "Informasi Kontak",
+                contact_form_title: "Kirim Pesan Kepada Kami",
+                cta_title: "Siap Mentransformasi Bisnis Anda?",
+                cta_description: "Biarkan ALFANUGERAH menangani proses bisnis Anda sehingga Anda dapat fokus pada pertumbuhan dan inovasi.",
+                cta_btn_contact: "Hubungi Kami",
+                cta_btn_whatsapp: "WhatsApp Kami",
+                feature_innovative_title: "Solusi Inovatif",
+                feature_innovative_desc: "Kami menggabungkan teknologi mutakhir dengan metodologi terbukti untuk memberikan hasil yang luar biasa.",
+                feature_expert_title: "Tim Ahli",
+                feature_expert_desc: "Para profesional kami membawa pengalaman bertahun-tahun di industri dan pengetahuan khusus untuk setiap proyek.",
+                feature_customized_title: "Pendekatan yang Disesuaikan",
+                feature_customized_desc: "Kami menyesuaikan layanan kami untuk memenuhi kebutuhan dan tujuan bisnis spesifik Anda.",
+                feature_datadriven_title: "Berbasis Data",
+                feature_datadriven_desc: "Strategi kami didukung oleh analitik dan pemantauan kinerja berkelanjutan.",
+                stats_cost_reduction: "Pengurangan Biaya",
+                stats_success_rate: "Tingkat Keberhasilan",
+                stats_support_available: "Dukungan Tersedia",
+                stats_confidentiality: "Kerahasiaan",
+                service_learn_more: "Pelajari lebih lanjut",
+                branding_feature1: "Pengembangan strategi merek",
+                branding_feature2: "Desain identitas visual",
+                branding_feature3: "Panduan merek",
+                telemarketing_feature1: "Generasi prospek",
+                telemarketing_feature2: "Penjadwalan janji",
+                telemarketing_feature3: "Survei pelanggan",
+                sales_feature1: "Akuisisi talenta",
+                sales_feature2: "Pelacakan kinerja",
+                sales_feature3: "Pelatihan berkelanjutan",
+                warehousing_feature1: "Kontrol inventori",
+                warehousing_feature2: "Pemenuhan pesanan",
+                warehousing_feature3: "Pelacakan real-time",
+                delivery_feature1: "Pengiriman last-mile",
+                delivery_feature2: "Optimisasi rute",
+                delivery_feature3: "Sistem pelacakan",
+                aftersales_feature1: "Dukungan teknis",
+                aftersales_feature2: "Resolusi keluhan",
+                aftersales_feature3: "Umpan balik pelanggan",
+                emerging_feature1_title: "Kelas Menengah yang Berkembang Pesat",
+                emerging_feature1_desc: "Meningkatnya pendapatan disposable menciptakan pasar konsumen baru",
+                emerging_feature2_title: "Ekonomi Mobile-First",
+                emerging_feature2_desc: "Penetrasi smartphone tinggi mendorong perdagangan digital",
+                emerging_feature3_title: "Demografi Muda",
+                emerging_feature3_desc: "Populasi yang paham teknologi mengadopsi solusi digital",
+                emerging_feature4_title: "Resonansi Budaya",
+                emerging_feature4_desc: "Representasi lokal membangun kepercayaan dan koneksi emosional",
+                emerging_feature5_title: "Autentisitas Merek",
+                emerging_feature5_desc: "Kampanye bahasa asli meningkatkan engagement hingga 300%",
+                emerging_feature6_title: "Kemitraan Lokal",
+                emerging_feature6_desc: "Memahami nuansa budaya mendorong tingkat konversi",
+                market_stat1_value: "685M",
+                market_stat1_label: "Total Populasi",
+                market_stat1_desc: "Indonesia, Malaysia, Vietnam",
+                market_stat2_value: "$3.5T",
+                market_stat2_label: "GDP Gabungan",
+                market_stat2_desc: "Tumbuh 5-7% per tahun",
+                market_stat3_value: "78%",
+                market_stat3_label: "Penetrasi Internet",
+                market_stat3_desc: "Konsumen mobile-first",
+                market_opportunities_title: "Peluang Pasar Asia Tenggara",
+                market_opportunities_desc: "Pasar kunci yang menunjukkan potensi pertumbuhan luar biasa untuk bisnis yang siap ekspansi",
+                form_name_label: "Nama Anda",
+                form_email_label: "Alamat Email",
+                form_phone_label: "Nomor Telepon",
+                form_service_label: "Layanan yang Diminati",
+                form_service_placeholder: "Pilih layanan",
+                form_service_branding: "Branding & Manajemen Merek",
+                form_service_telemarketing: "Kampanye Telemarketing",
+                form_service_sales: "Manajemen Tim Penjualan",
+                form_service_warehousing: "Solusi Pergudangan",
+                form_service_logistics: "Pengiriman & Logistik",
+                form_service_support: "Layanan Purna Jual",
+                form_message_label: "Pesan Anda",
+                form_submit_btn: "Kirim Pesan",
+                contact_email_label: "Email",
+                contact_whatsapp_label: "WhatsApp",
+                contact_hours_label: "Jam Operasional",
+                contact_hours_time: "Senin - Jumat: 09:00 - 18:00",
+                contact_follow_label: "Ikuti Kami",
+                footer_description: "Solusi Business Process Outsourcing profesional untuk membantu bisnis Anda berkembang secara efisien dan hemat biaya.",
+                footer_quick_links: "Tautan Cepat",
+                footer_services_title: "Layanan",
+                footer_service_branding: "Branding",
+                footer_service_telemarketing: "Telemarketing",
+                footer_service_sales: "Manajemen Penjualan",
+                footer_service_logistics: "Logistik",
+                footer_service_support: "Dukungan Pelanggan",
+                footer_copyright: "© 2023 ALFANUGERAH. Semua hak dilindungi.",
+                footer_privacy: "Kebijakan Privasi",
+                footer_terms: "Syarat Layanan",
+                footer_cookie: "Kebijakan Cookie"
+            },
+            zh: {
+                nav_home: "首页",
+                nav_about: "关于",
+                nav_services: "服务",
+                nav_emerging_markets: "新兴市场",
+                nav_contact: "联系",
+                nav_get_started: "开始",
+                hero_title_line1: "专业数字",
+                hero_title_line2: "营销",
+                hero_description: "Alfanugerah是一家专业的数字营销公司，专门提供高端业务流程外包（BPO）服务，帮助客户高效有效地扩展业务，同时大幅降低运营成本。",
+                hero_btn_get_started: "开始",
+                hero_btn_our_services: "我们的服务",
+                about_section_label: "关于我们",
+                about_why_title: "为什么选择Alfanugerah？",
+                bpo_what_title: "什么是BPO？",
+                bpo_definition: "BPO代表业务流程外包，涉及将特定业务操作外包给第三方服务提供商，以提高效率和降低成本。",
+                bpo_detailed_explanation: "业务流程外包是一种战略实践，企业将非核心业务功能委托给外部专业提供商。这种综合方法包括客户服务、技术支持、数据录入、人力资源、会计和各种操作任务。BPO使组织能够利用专业知识、先进技术和规模经济，同时保持对主要业务目标的关注。",
+                alfanugerah_description: "Alfanugerah是一家专门从事BPO服务的数字营销公司。我们提供全面的数字营销和外包解决方案，根据您的业务需求量身定制。我们的专家团队帮助企业简化运营、增强客户体验，并通过战略外包和数字营销推动增长。",
+                alfanugerah_experience: "凭借在行业中的多年经验，我们已帮助众多企业优化流程，将间接成本降低多达45%，专注于核心竞争力，而我们处理其余部分。我们的方法结合了尖端技术和人类专业知识，提供超出预期的可衡量结果。",
+                services_section_label: "我们的服务",
+                services_title: "全面的BPO解决方案",
+                services_description: "量身定制的服务，旨在简化您的业务运营并推动可持续增长。",
+                service_branding_title: "品牌与品牌管理",
+                service_branding_desc: "全面的品牌解决方案，在市场中建立和维护您的品牌形象，确保所有接触点的一致性。",
+                service_telemarketing_title: "电话营销活动",
+                service_telemarketing_desc: "有针对性的电话营销策略，为您的业务产生潜在客户、进行市场研究并推动销售转化。",
+                service_sales_title: "销售团队管理",
+                service_sales_desc: "端到端的销售人员雇佣和管理，从招聘到绩效监控和培训。",
+                service_warehousing_title: "仓储解决方案",
+                service_warehousing_desc: "高效的仓储和库存管理服务，优化您的供应链并降低运营成本。",
+                service_delivery_title: "配送与物流",
+                service_delivery_desc: "可靠的配送和物流服务，确保您的产品按时完好地送达客户。",
+                service_aftersales_title: "售后服务",
+                service_aftersales_desc: "专业的客户支持和售后服务，提高客户满意度并建立品牌忠诚度。",
+                emerging_markets_label: "新兴市场",
+                emerging_markets_title: "可信度与可衡量的结果",
+                emerging_markets_desc: "与我们的客户签署的全面保密协议为他们提供保证，所有生成的数据和信息将保持在最高级别的机密性，从而保护我们客户的利益。",
+                southeast_asia_title: "东南亚潜力",
+                southeast_asia_desc: "东南亚代表世界上增长最快的经济区域之一，印度尼西亚、马来西亚和越南等国家引领着前所未有的数字化转型和经济扩张。",
+                localization_title: "语言本地化优势",
+                localization_desc: "在东南亚市场取得成功需要深厚的文化理解和本地语言专业知识。在营销活动中拥有\"本地面孔\"的重要性不容小觑。",
+                contact_section_label: "联系我们",
+                contact_title: "联系我们",
+                contact_description: "有问题或准备开始？今天就联系我们的团队。",
+                contact_info_title: "联系信息",
+                contact_form_title: "给我们发消息",
+                cta_title: "准备好转型您的业务了吗？",
+                cta_description: "让ALFANUGERAH处理您的业务流程，这样您就可以专注于增长和创新。",
+                cta_btn_contact: "联系我们",
+                cta_btn_whatsapp: "WhatsApp我们",
+                feature_innovative_title: "创新解决方案",
+                feature_innovative_desc: "我们将尖端技术与经证方法论相结合，提供卓越的成果。",
+                feature_expert_title: "专家团队",
+                feature_expert_desc: "我们的专业人员在每个项目中都带来多年的行业经验和专业知识。",
+                feature_customized_title: "定制化方法",
+                feature_customized_desc: "我们量身定制服务，以满足您的具体业务需求和目标。",
+                feature_datadriven_title: "数据驱动",
+                feature_datadriven_desc: "我们的策略由分析和持续绩效监控支持。",
+                stats_cost_reduction: "成本降低",
+                stats_success_rate: "成功率",
+                stats_support_available: "支持可用",
+                stats_confidentiality: "保密性",
+                service_learn_more: "了解更多",
+                branding_feature1: "品牌战略开发",
+                branding_feature2: "视觉身份设计",
+                branding_feature3: "品牌指南",
+                telemarketing_feature1: "潜在客户开发",
+                telemarketing_feature2: "预约安排",
+                telemarketing_feature3: "客户调查",
+                sales_feature1: "人才获取",
+                sales_feature2: "绩效跟踪",
+                sales_feature3: "持续培训",
+                warehousing_feature1: "库存控制",
+                warehousing_feature2: "订单履行",
+                warehousing_feature3: "实时跟踪",
+                delivery_feature1: "最后一公里配送",
+                delivery_feature2: "路线优化",
+                delivery_feature3: "跟踪系统",
+                aftersales_feature1: "技术支持",
+                aftersales_feature2: "投诉解决",
+                aftersales_feature3: "客户反馈",
+                emerging_feature1_title: "快速增长的中产阶级",
+                emerging_feature1_desc: "可支配收入的增加创造了新的消费市场",
+                emerging_feature2_title: "移动优先经济",
+                emerging_feature2_desc: "高智能手机普及率推动数字商务",
+                emerging_feature3_title: "年轻人口结构",
+                emerging_feature3_desc: "精通技术的人口拥抱数字解决方案",
+                emerging_feature4_title: "文化共鸣",
+                emerging_feature4_desc: "本地代表建立信任和情感联系",
+                emerging_feature5_title: "品牌真实性",
+                emerging_feature5_desc: "本土语言活动将参与度提高300%",
+                emerging_feature6_title: "本地合作伙伴",
+                emerging_feature6_desc: "理解文化细微差别推动转化率",
+                market_stat1_value: "6.85亿",
+                market_stat1_label: "总人口",
+                market_stat1_desc: "印度尼西亚、马来西亚、越南",
+                market_stat2_value: "3.5万亿美元",
+                market_stat2_label: "综合GDP",
+                market_stat2_desc: "每年增长5-7%",
+                market_stat3_value: "78%",
+                market_stat3_label: "互联网普及率",
+                market_stat3_desc: "移动优先消费者",
+                market_opportunities_title: "东南亚市场机会",
+                market_opportunities_desc: "为准备扩张的企业显示出卓越增长潜力的关键市场",
+                form_name_label: "您的姓名",
+                form_email_label: "电子邮箱地址",
+                form_phone_label: "电话号码",
+                form_service_label: "感兴趣的服务",
+                form_service_placeholder: "选择服务",
+                form_service_branding: "品牌与品牌管理",
+                form_service_telemarketing: "电话营销活动",
+                form_service_sales: "销售团队管理",
+                form_service_warehousing: "仓储解决方案",
+                form_service_logistics: "配送与物流",
+                form_service_support: "售后服务",
+                form_message_label: "您的留言",
+                form_submit_btn: "发送消息",
+                contact_email_label: "电子邮箱",
+                contact_whatsapp_label: "WhatsApp",
+                contact_hours_label: "营业时间",
+                contact_hours_time: "周一至周五：上剈9:00至下午6:00",
+                contact_follow_label: "关注我们",
+                footer_description: "专业的业务流程外包解决方案，帮助您的业务高效、经济地增长。",
+                footer_quick_links: "快速链接",
+                footer_services_title: "服务",
+                footer_service_branding: "品牌推广",
+                footer_service_telemarketing: "电话营销",
+                footer_service_sales: "销售管理",
+                footer_service_logistics: "物流",
+                footer_service_support: "客户支持",
+                footer_copyright: "© 2023 ALFANUGERAH。保留所有权利。",
+                footer_privacy: "隐私政策",
+                footer_terms: "服务条款",
+                footer_cookie: "Cookie政策"
+            }
+        };
+
+        // Language functionality
+        let currentLanguage = localStorage.getItem('language') || 'en';
+        
+        const languageLabels = {
+            en: '🇺🇸 EN',
+            id: '🇮🇩 ID',
+            zh: '🇨🇳 中文'
+        };
+
+        function updateLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('language', lang);
+            
+            // Update all elements with data-lang-key
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[lang] && translations[lang][key]) {
+                    // Handle different element types
+                    if (element.tagName === 'INPUT' && element.type === 'submit') {
+                        element.value = translations[lang][key];
+                    } else if (element.tagName === 'INPUT' && element.hasAttribute('placeholder')) {
+                        element.placeholder = translations[lang][key];
+                    } else if (element.tagName === 'OPTION') {
+                        element.textContent = translations[lang][key];
+                    } else {
+                        // For regular elements, preserve HTML structure while updating text
+                        const htmlContent = element.innerHTML;
+                        const hasIcons = htmlContent.includes('<i class=');
+                        const hasSpans = htmlContent.includes('<span class=');
+                        
+                        if (hasIcons || hasSpans) {
+                            // For elements with icons or spans, update carefully
+                            const textNodes = [];
+                            element.childNodes.forEach(node => {
+                                if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+                                    textNodes.push(node);
+                                }
+                            });
+                            if (textNodes.length === 1) {
+                                textNodes[0].textContent = translations[lang][key];
+                            } else {
+                                // Fallback: replace the main text content
+                                const iconHTML = htmlContent.match(/<i[^>]*>[^<]*<\/i>/g) || [];
+                                element.innerHTML = translations[lang][key] + ' ' + iconHTML.join(' ');
+                            }
+                        } else {
+                            element.textContent = translations[lang][key];
+                        }
+                    }
+                }
+            });
+            
+            // Update language dropdown button text
+            document.getElementById('current-language').textContent = languageLabels[lang];
+            document.getElementById('mobile-current-language').textContent = languageLabels[lang];
+            
+            // Close dropdowns with animation
+            const dropdown = document.getElementById('language-dropdown');
+            const mobileDropdown = document.getElementById('mobile-language-dropdown');
+            
+            dropdown.classList.remove('show');
+            mobileDropdown.classList.remove('show');
+            
+            setTimeout(() => {
+                dropdown.classList.add('hidden');
+                mobileDropdown.classList.add('hidden');
+            }, 200);
+        }
+
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateLanguage(currentLanguage);
+            
+            // Desktop language dropdown
+            const dropdownBtn = document.getElementById('language-dropdown-btn');
+            const dropdown = document.getElementById('language-dropdown');
+            
+            dropdownBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const mobileDropdown = document.getElementById('mobile-language-dropdown');
+                
+                // Close mobile dropdown first
+                mobileDropdown.classList.remove('show');
+                setTimeout(() => mobileDropdown.classList.add('hidden'), 200);
+                
+                // Toggle desktop dropdown with animation
+                if (dropdown.classList.contains('hidden')) {
+                    dropdown.classList.remove('hidden');
+                    setTimeout(() => dropdown.classList.add('show'), 10);
+                } else {
+                    dropdown.classList.remove('show');
+                    setTimeout(() => dropdown.classList.add('hidden'), 200);
+                }
+            });
+            
+            // Mobile language dropdown
+            const mobileDropdownBtn = document.getElementById('mobile-language-dropdown-btn');
+            const mobileDropdown = document.getElementById('mobile-language-dropdown');
+            
+            mobileDropdownBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                
+                // Close desktop dropdown first
+                dropdown.classList.remove('show');
+                setTimeout(() => dropdown.classList.add('hidden'), 200);
+                
+                // Toggle mobile dropdown with animation
+                if (mobileDropdown.classList.contains('hidden')) {
+                    mobileDropdown.classList.remove('hidden');
+                    setTimeout(() => mobileDropdown.classList.add('show'), 10);
+                } else {
+                    mobileDropdown.classList.remove('show');
+                    setTimeout(() => mobileDropdown.classList.add('hidden'), 200);
+                }
+            });
+            
+            // Language option clicks
+            document.querySelectorAll('.language-option, .mobile-language-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    updateLanguage(lang);
+                });
+            });
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function() {
+                const dropdown = document.getElementById('language-dropdown');
+                const mobileDropdown = document.getElementById('mobile-language-dropdown');
+                
+                dropdown.classList.remove('show');
+                mobileDropdown.classList.remove('show');
+                
+                setTimeout(() => {
+                    dropdown.classList.add('hidden');
+                    mobileDropdown.classList.add('hidden');
+                }, 200);
+            });
+        });
+
+        // Mobile menu toggle with animation
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const isHidden = menu.classList.contains('hidden');
+            
+            if (isHidden) {
+                menu.classList.remove('hidden');
+                setTimeout(() => menu.classList.add('show'), 10);
+            } else {
+                menu.classList.remove('show');
+                setTimeout(() => menu.classList.add('hidden'), 300);
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open with animation
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('show');
+                    setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+                }
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                // Reset form
+                this.reset();
+                
+                // Show success message
+                submitBtn.innerHTML = '<i class="fas fa-check mr-2"></i> Message Sent!';
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 3000);
+                
+                // Show alert
+                alert('Thank you for your message! We will get back to you soon.');
+            }, 1500);
+        });
+
+        // Animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.service-card, .testimonial-card');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Set initial state for animated elements
+        document.querySelectorAll('.service-card, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+        });
+
+        // Run animation check on scroll and load
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
